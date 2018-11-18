@@ -1,6 +1,8 @@
 import {animate, AnimationMetadata, state, style, transition, trigger} from '@angular/animations';
 
-// Component transition animations
+/**
+ * 遮罩层动画
+ */
 export const mask: AnimationMetadata =
     trigger('mask', [
         state('enter', style({opacity: 0.7})),
@@ -8,12 +10,15 @@ export const mask: AnimationMetadata =
         state('exit', style({opacity: 0})),
         transition('* => *', animate('0.3s linear'))
     ]);
+/**
+ * dialog 动画
+ */
 export const dialog: AnimationMetadata =
     trigger('dialog', [
         state('enter', style({
             'opacity': '1',
-            '-webkit-transform': 'translate(-50%, -50%) scale(1)',
-            'transform': 'translate(-50%, -50%) scale(1)'
+            '-webkit-transform': 'scale(1)',
+            'transform': 'scale(1)'
         })),
         state('void', style({
             'opacity': '0',
@@ -30,6 +35,9 @@ export const dialog: AnimationMetadata =
         ])
     ]);
 
+/**
+ * load动画
+ */
 export const load: AnimationMetadata =
     trigger('load', [
         state('enter', style({
@@ -50,6 +58,9 @@ export const load: AnimationMetadata =
         transition('* => *', animate('0.3s ease-in'))
     ]);
 
+/**
+ * toast动画
+ */
 export const toast: AnimationMetadata =
     trigger('toast', [
         state('enter', style({

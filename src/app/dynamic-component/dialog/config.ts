@@ -1,6 +1,6 @@
-import {DynamicBaseConfig} from '../config';
+import {ContainerConfig} from '../container-config';
 
-export class DialogConfig extends DynamicBaseConfig {
+export interface DialogConfig extends ContainerConfig {
     /**
      * 是否显示取消按钮，用于区分alert和dialog
      */

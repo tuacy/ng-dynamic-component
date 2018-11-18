@@ -1,5 +1,6 @@
+import {DynamicBaseConfig} from './base-config';
 
-export class DynamicBaseConfig {
+export interface ContainerConfig extends DynamicBaseConfig {
     /**
      * [transition]透明点击无效
      * [mask]点击后关闭

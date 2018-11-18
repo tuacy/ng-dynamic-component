@@ -4,6 +4,7 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {RouterModule} from '@angular/router';
 import {FormsModule} from '@angular/forms';
+import {DynamicModule} from './dynamic-component/dynamic.module';
 
 @NgModule({
     declarations: [
@@ -12,10 +13,12 @@ import {FormsModule} from '@angular/forms';
     imports: [
         BrowserModule,
         RouterModule,
-        FormsModule
+        FormsModule,
+        DynamicModule
     ],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    entryComponents: []
 })
 export class AppModule {
 }
